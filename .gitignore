@@ -113,3 +113,4 @@ ENV/
 /output_lacie_updated
 .DS_Store
 /voiceflow_projects
+/voiceflow_exports
