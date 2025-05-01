@@ -2,6 +2,13 @@
 History
 =======
 
+0.3.1 (2025-05-01)
+------------------
+
+* Fixed validation error for diagrams with decimal zoom values:
+  * Updated VoiceflowDiagram model to use Optional[float] instead of Optional[int] for the zoom field
+  * This allows the parser to handle diagrams with fractional zoom values (e.g., 1.5)
+
 0.3.0 (2025-05-01)
 ------------------
 

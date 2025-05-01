@@ -26,7 +26,7 @@ class VoiceflowDiagram(BaseModel):
     versionID: Optional[str] = None
     offsetX: Optional[float] = None
     offsetY: Optional[float] = None
-    zoom: Optional[int] = None
+    zoom: Optional[float] = None
 
 
 class VoiceflowIntent(BaseModel):
