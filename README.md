@@ -105,18 +105,21 @@ For each prompt, the parser generates:
 
 ```
 voiceflow_parser/
-├── voiceflow_parser/       # Main package
-│   ├── models/            # Data models for Voiceflow exports
-│   ├── services/          # Business logic for parsing and generating files
-│   ├── utils/             # Utility functions
-│   ├── main.py            # Main application logic
-│   └── cli.py             # Command-line interface
-├── tests/                 # Test suite
-│   ├── unit/              # Unit tests
-│   └── integration/       # Integration tests
-├── .venv/                 # Virtual environment (not tracked in git)
-├── setup.py               # Package setup file
-└── requirements.txt       # Development dependencies
+├── src/
+│   └── voiceflow_parser/      # Main package
+│       ├── models/            # Data models for Voiceflow exports
+│       ├── services/          # Business logic for parsing and generating files
+│       ├── utils/             # Utility functions
+│       ├── main.py            # Main application logic
+│       └── cli.py             # Command-line interface
+├── tests/                     # Test suite
+│   ├── unit/                  # Unit tests
+│   └── integration/           # Integration tests
+├── voiceflow_exports/         # Directory for Voiceflow export files
+│   └── *.vf                   # Voiceflow export files
+├── voiceflow_projects/        # Generated project outputs
+├── setup.py                   # Package setup file
+└── requirements.txt           # Development dependencies
 ```
 
 ## Development
@@ -136,10 +139,12 @@ isort voiceflow_parser tests
 
 ### Type Checking
 
+We use MyPy for static type checking.
+
 ```bash
-mypy voiceflow_parser
+mypy src/voiceflow_parser
 ```
 
 ## License
 
-[Add your license information here]
+None

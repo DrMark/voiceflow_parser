@@ -2,8 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="voiceflow_parser",
-    version="0.1.0",
-    packages=find_packages(),
+    version="0.3.1",  # Updated version based on HISTORY.rst
+    package_dir={"": "src"},  # Tell setuptools packages are under src/
+    packages=find_packages(where="src"),  # Only look in src directory
     include_package_data=True,
     install_requires=[
         "click>=8.1.3",
